@@ -1,3 +1,5 @@
 iphonex_camera_calibration_env
-video_files
+video_files/
 avidemux_proj
+output*
+frames
