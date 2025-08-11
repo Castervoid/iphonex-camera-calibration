@@ -31,8 +31,8 @@ for image in  images:
 
         cv.drawChessboardCorners(img, chessboardSize, corners2, ret)
 
-        width = int(img.shape[1] * 0.25)
-        height = int(img.shape[0] * 0.25)
+        width = int(img.shape[1] * 1)
+        height = int(img.shape[0] * 1)
         dim = (width, height)
 
         resized = cv.resize(img, dim, interpolation=cv.INTER_AREA)
@@ -82,7 +82,7 @@ fs.endWriteStruct()
 fs.release()
 
 
-img = cv.imread('frames/chessboard_4.jpg')
+img = cv.imread('frames/chessboard_720p_30fps_4.jpg')
 h,  w = img.shape[:2]
 newCameraMatrix, roi = cv.getOptimalNewCameraMatrix(cameraMatrix, dist, (w,h), 1, (w,h))
 
